@@ -13,6 +13,16 @@ const Runs = () => {
         const updateRuns = runs + 4 
         setRuns (updateRuns)
     }
+
+    const sixRuns = () => {
+        const updateRuns = runs + 6
+        setRuns(updateRuns)
+    }
+
+    const noBall = () => {
+        const updateRuns = runs + 1
+        setRuns(updateRuns)
+    }
     
     // Style
     const runsStyle = {
@@ -26,6 +36,8 @@ const Runs = () => {
         <h1>Runs : {runs}</h1>
         <button onClick={singleRun}>Single Runs</button>
         <button onClick={fourRuns}>Four Runs</button>
+        <button onClick={sixRuns}>Six Runs</button>
+        <button onClick={noBall}>No Ball</button>
     </div>
  )
 };
