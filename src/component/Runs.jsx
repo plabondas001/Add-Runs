@@ -5,6 +5,7 @@ const Runs = () => {
     const [runs,setRuns] = useState(0);
     const [fours,setFours] = useState(0)
     const [sixes,setSixes] = useState(0)
+    const [wide,setWide] = useState(0)
     // Event handler
     const singleRun = () => {
         const updateRuns = runs + 1
@@ -29,6 +30,13 @@ const Runs = () => {
         const updateRuns = runs + 1
         setRuns(updateRuns)
     }
+
+    const wideBall = () => {
+        const updateRuns = runs + 1
+        const updateWide = wide + 1
+        setWide(updateWide)
+        setRuns(updateRuns)
+    }
     
     // Style
     const runsStyle = {
@@ -42,6 +50,7 @@ const Runs = () => {
         <h1>Runs : {runs}</h1>
         <h3>Fours : {fours}</h3>
         <h3>Sixes : {sixes}</h3>
+        <h3>Wide : {wide}</h3>
         {
             runs >= 50 && <h2>Half Century</h2>
         }
@@ -53,6 +62,7 @@ const Runs = () => {
         <button onClick={fourRuns}>Four Runs</button>
         <button onClick={sixRuns}>Six Runs</button>
         <button onClick={noBall}>No Ball</button>
+        <button onClick={wideBall}>Wide Ball</button>
     </div>
  )
 };
