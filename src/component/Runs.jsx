@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const Runs = () => {
+    // SetRuns
+    const [runs,setRuns] = useState(0);
+    
     // Style
     const runsStyle = {
         border : '1px solid orange',
