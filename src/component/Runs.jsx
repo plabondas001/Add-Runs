@@ -34,6 +34,9 @@ const Runs = () => {
  return (
     <div style={runsStyle}>
         <h1>Runs : {runs}</h1>
+        {
+            runs >= 50 && <h2>Half Century</h2>
+        }
         <button onClick={singleRun}>Single Runs</button>
         <button onClick={fourRuns}>Four Runs</button>
         <button onClick={sixRuns}>Six Runs</button>
