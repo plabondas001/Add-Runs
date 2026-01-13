@@ -3,6 +3,11 @@ import { useState } from "react";
 const Runs = () => {
     // SetRuns
     const [runs,setRuns] = useState(0);
+    // Event handler
+    const singleRun = () => {
+        const updateRuns = runs + 1
+        setRuns(updateRuns)
+    }
     
     // Style
     const runsStyle = {
@@ -13,8 +18,8 @@ const Runs = () => {
     }
  return (
     <div style={runsStyle}>
-        <h1>Runs :</h1>
-        <button>Single Runs</button>
+        <h1>Runs : {runs}</h1>
+        <button onClick={singleRun}>Single Runs</button>
     </div>
  )
 };
