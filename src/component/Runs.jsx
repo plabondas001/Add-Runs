@@ -5,6 +5,7 @@ const Runs = () => {
     const [runs,setRuns] = useState(0);
     const [fours,setFours] = useState(0)
     const [sixes,setSixes] = useState(0)
+    const [noball,setNoball] = useState(0)
     const [wide,setWide] = useState(0)
     // Event handler
     const singleRun = () => {
@@ -28,6 +29,8 @@ const Runs = () => {
 
     const noBall = () => {
         const updateRuns = runs + 1
+        const updatenoBall = noball + 1
+        setNoball(updatenoBall)
         setRuns(updateRuns)
     }
 
@@ -50,6 +53,7 @@ const Runs = () => {
         <h1>Runs : {runs}</h1>
         <h3>Fours : {fours}</h3>
         <h3>Sixes : {sixes}</h3>
+        <h3>NOBall : {noball}</h3>
         <h3>Wide : {wide}</h3>
         {
             runs >= 50 && <h2>Half Century</h2>
