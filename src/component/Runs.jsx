@@ -3,6 +3,7 @@ import { useState } from "react";
 const Runs = () => {
     // SetRuns
     const [runs,setRuns] = useState(0);
+    const [fours,setFours] = useState(0)
     const [sixes,setSixes] = useState(0)
     // Event handler
     const singleRun = () => {
@@ -12,6 +13,8 @@ const Runs = () => {
 
     const fourRuns = () => {
         const updateRuns = runs + 4 
+        const updateFour = fours + 1
+        setFours(updateFour)
         setRuns (updateRuns)
     }
 
@@ -37,6 +40,7 @@ const Runs = () => {
  return (
     <div style={runsStyle}>
         <h1>Runs : {runs}</h1>
+        <h3>Fours : {fours}</h3>
         <h3>Sixes : {sixes}</h3>
         {
             runs >= 50 && <h2>Half Century</h2>
