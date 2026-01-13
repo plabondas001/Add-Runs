@@ -46,7 +46,18 @@ const Runs = () => {
         border : '1px solid orange',
         padding : '20px',
         color : 'orange',
-        width : '500px'
+        width : '80%',
+        borderRadius : '20px',
+        margin: '0 auto',
+        maxWidth: '1200px'
+    }
+    // Button style
+    const btnStyle = {
+        display : 'flex',
+        flexWrap: 'wrap',
+        gap: '20px',
+        justifyContent: 'center'
+
     }
  return (
     <div style={runsStyle}>
@@ -62,11 +73,13 @@ const Runs = () => {
         {
             runs >= 100 && <h1>Century</h1>
         }
-        <button onClick={singleRun}>Single Runs</button>
+       <div style={btnStyle}>
+         <button onClick={singleRun}>Single Runs</button>
         <button onClick={fourRuns}>Four Runs</button>
         <button onClick={sixRuns}>Six Runs</button>
         <button onClick={noBall}>No Ball</button>
         <button onClick={wideBall}>Wide Ball</button>
+       </div>
     </div>
  )
 };
