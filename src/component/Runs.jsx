@@ -37,6 +37,10 @@ const Runs = () => {
         {
             runs >= 50 && <h2>Half Century</h2>
         }
+
+        {
+            runs >= 100 && <h1>Century</h1>
+        }
         <button onClick={singleRun}>Single Runs</button>
         <button onClick={fourRuns}>Four Runs</button>
         <button onClick={sixRuns}>Six Runs</button>
