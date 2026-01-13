@@ -1,6 +1,13 @@
 const Runs = () => {
+    // Style
+    const runsStyle = {
+        border : '1px solid orange',
+        padding : '20px',
+        color : 'orange',
+        width : '500px'
+    }
  return (
-    <div>
+    <div style={runsStyle}>
         <h1>Runs :</h1>
         <button>Single Runs</button>
     </div>
