@@ -8,6 +8,11 @@ const Runs = () => {
         const updateRuns = runs + 1
         setRuns(updateRuns)
     }
+
+    const fourRuns = () => {
+        const updateRuns = runs + 4 
+        setRuns (updateRuns)
+    }
     
     // Style
     const runsStyle = {
@@ -20,6 +25,7 @@ const Runs = () => {
     <div style={runsStyle}>
         <h1>Runs : {runs}</h1>
         <button onClick={singleRun}>Single Runs</button>
+        <button onClick={fourRuns}>Four Runs</button>
     </div>
  )
 };
